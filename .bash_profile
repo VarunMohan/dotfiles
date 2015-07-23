@@ -5,7 +5,6 @@ alias ls="ls -FC --color"
 alias ls="ls -FC"
 alias m=more
 alias clr=clear
-# alias top="top -d 2"
 alias h=history
 alias dir='du -ks * | sort -nr'
 alias xemacs="open -a emacs"
@@ -14,5 +13,5 @@ alias mysqls="sudo /usr/local/mysql/support-files/mysql.server"
 alias opensql="/usr/local/mysql/bin/mysql -u root -h localhost -p"
 alias tm="tmux"
 
-export PATH=$PATH:/usr/X11/bin:/Users/varun/temp
-export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH"
+export PATH=$PATH:/Users/varun/temp
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
