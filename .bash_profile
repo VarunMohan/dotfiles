@@ -12,6 +12,7 @@ alias apaches="sudo /opt/local/apache2/bin/apachectl"
 alias mysqls="sudo /usr/local/mysql/support-files/mysql.server"
 alias opensql="/usr/local/mysql/bin/mysql -u root -h localhost -p"
 alias tm="tmux"
+alias ssh-mit="ssh vmohan@athena.dialup.mit.edu"
 
 export PATH=$PATH:/Users/varun/temp
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
