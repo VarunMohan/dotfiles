@@ -16,8 +16,8 @@ export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 export EDITOR=/usr/bin/vim
 export GOPATH=$HOME/go
 
-set -o vi
-bind -m vi-insert "\C-l":clear-screen
+#set -o vi
+#bind -m vi-insert "\C-l":clear-screen
 
 alias subl="sublime"
 
