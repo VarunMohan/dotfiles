@@ -1,12 +1,9 @@
 export PS1="\u.\w> "
 
 alias rm="rm -i"
-#alias ls="ls -FC --color"
 alias ls="ls -FC"
-alias m=more
 alias clr=clear
 alias h=history
-alias dir='du -ks * | sort -nr'
 alias grep='grep --color=auto'
 
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
