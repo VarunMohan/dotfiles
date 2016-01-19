@@ -26,3 +26,7 @@ alias ssh-httpd="ssh httpd@172.16.238.128"
 alias ssh-httpdw="ssh -L localhost:8080:localhost:8080 httpd@172.16.238.128"
 alias ssh-csail="ssh vamohan@login.csail.mit.edu"
 alias ssh-lanka="ssh vamohan@lanka.csail.mit.edu"
+
+if [ -f ~/.bashrc ]; then
+   source ~/.bashrc
+fi
