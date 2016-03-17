@@ -4,6 +4,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'kien/ctrlp.vim'
 
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 "Edit
 Plug 'scrooloose/nerdcommenter'
 
@@ -18,6 +21,7 @@ Plug 'tpope/vim-fugitive'
 
 "Status Bar
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 "Lang
 Plug 'lervag/vimtex'
@@ -84,10 +88,10 @@ if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
 
-let g:solarized_termcolors=256
-let g:solarized_termtrans = 1
-set background=dark
-colorscheme solarized
+"let g:solarized_termcolors=256
+"let g:solarized_termtrans = 1
+"set background=dark
+"colorscheme solarized
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -100,9 +104,12 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_go_checkers=['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active',  'passive_filetypes': ['tex', 'go'] }
 
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_theme = 'simple'
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
