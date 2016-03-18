@@ -63,7 +63,6 @@ set showmatch
 set ignorecase
 set smartcase
 set smarttab
-set hlsearch
 set incsearch
 set history=1000
 set undolevels=1000
@@ -88,10 +87,10 @@ if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
 
-"let g:solarized_termcolors=256
-"let g:solarized_termtrans = 1
-"set background=dark
-"colorscheme solarized
+let g:solarized_termcolors=256
+let g:solarized_termtrans = 1
+set background=dark
+colorscheme solarized
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -104,7 +103,6 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_go_checkers=['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active',  'passive_filetypes': ['tex', 'go'] }
 
-"let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_theme = 'simple'
