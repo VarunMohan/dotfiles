@@ -1,7 +1,4 @@
-export PS1="\u.\w> "
-
 alias rm="rm -i"
-alias ls="ls -FCG --color=auto"
 alias clr=clear
 alias h=history
 alias grep='grep --color=auto'
@@ -20,5 +17,9 @@ export PATH=$PATH:$GOPATH/bin
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 if [ -f ~/.aliases ]; 
-    then source ~/.aliases
+    then . ~/.aliases
+fi
+
+if [ -f ~/.profile ]; 
+    then . ~/.profile
 fi
