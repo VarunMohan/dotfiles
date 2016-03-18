@@ -1,7 +1,7 @@
 export PS1="\u.\w> "
 
 alias rm="rm -i"
-alias ls="ls -FCG"
+alias ls="ls -FCG --color=auto"
 alias clr=clear
 alias h=history
 alias grep='grep --color=auto'
