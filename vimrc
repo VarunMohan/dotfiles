@@ -93,7 +93,7 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_go_checkers=['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active',  'passive_filetypes': ['tex', 'go', 'py'] }
+let g:syntastic_mode_map = { 'mode': 'active',  'passive_filetypes': ['tex', 'go', 'cpp', 'py'] }
 
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#fnamemod = ':t'
