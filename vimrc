@@ -31,6 +31,8 @@ Plug 'klen/python-mode'
 "Lint
 Plug 'scrooloose/syntastic'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'tpope/vim-sleuth'
+
 
 "Tag
 Plug 'majutsushi/tagbar'
@@ -82,7 +84,7 @@ let g:solarized_termtrans = 1
 set background=dark
 colorscheme solarized
 
-set nonu
+setlocal nonumber
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -134,3 +136,7 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 let g:pymode_folding = 0
 
 let g:jedi#goto_assignments_command = "<leader>G"
+
+" extra stuff for when the indentation plugin gets confused
+:command -nargs=1 Soft set tabstop=<args> softtabstop=<args> shiftwidth=<args> expandtab
+:command -nargs=1 Hard set tabstop=<args> softtabstop=<args> shiftwidth=<args> noexpandtab
