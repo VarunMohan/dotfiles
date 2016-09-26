@@ -2,6 +2,7 @@ alias rm="rm -i"
 alias clr=clear
 alias h=history
 alias grep='grep --color=auto'
+alias ls="ls -FCG"
 
 export EDITOR=/usr/bin/vim
 export GOPATH=$HOME/go

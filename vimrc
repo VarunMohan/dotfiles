@@ -25,6 +25,8 @@ Plug 'vim-airline/vim-airline-themes'
 "Lang
 Plug 'lervag/vimtex'
 Plug 'fatih/vim-go'
+Plug 'davidhalter/jedi-vim'
+Plug 'klen/python-mode'
 
 "Lint
 Plug 'scrooloose/syntastic'
@@ -80,6 +82,8 @@ let g:solarized_termtrans = 1
 set background=dark
 colorscheme solarized
 
+set nonu
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -89,7 +93,7 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_go_checkers=['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active',  'passive_filetypes': ['tex', 'go'] }
+let g:syntastic_mode_map = { 'mode': 'active',  'passive_filetypes': ['tex', 'go', 'py'] }
 
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#fnamemod = ':t'
@@ -100,3 +104,33 @@ let g:airline_right_sep = ''
 let g:tex_flavor='latex'
 
 let g:go_fmt_autosave = 0
+
+let g:pymode_rope = 0
+
+" Documentation
+let g:pymode_doc = 1
+let g:pymode_doc_key = 'K'
+
+"Linting
+let g:pymode_lint = 1
+let g:pymode_lint_checker = "pyflakes,pep8"
+" Auto check on save
+let g:pymode_lint_write = 1
+
+" Support virtualenv
+let g:pymode_virtualenv = 1
+
+" Enable breakpoints plugin
+let g:pymode_breakpoint = 1
+let g:pymode_breakpoint_key = '<leader>x'
+
+" syntax highlighting
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
+let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+let g:pymode_syntax_space_errors = g:pymode_syntax_all
+
+" Don't autofold code
+let g:pymode_folding = 0
+
+let g:jedi#goto_assignments_command = "<leader>G"
