@@ -1,17 +1,16 @@
 call plug#begin('~/.vim/plugged')
 
+"Defaults
+Plug 'tpope/vim-sensible'
+
 "Browsing
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'kien/ctrlp.vim'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 "Edit
 Plug 'scrooloose/nerdcommenter'
-
-"Buffers
-Plug 'https://github.com/jlanzarotta/bufexplorer'
 
 "Colors
 Plug 'altercation/vim-colors-solarized'
@@ -29,6 +28,10 @@ Plug 'fatih/vim-go'
 
 "Lint
 Plug 'scrooloose/syntastic'
+Plug 'ntpeters/vim-better-whitespace'
+
+"Tag
+Plug 'majutsushi/tagbar'
 
 call plug#end()
 
@@ -46,42 +49,27 @@ map <C-k> <C-w><Up>
 map <C-j> <C-w><Down>
 map <C-l> <C-w><Right>
 map <C-h> <C-w><Left>
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
 
-set hidden
-set tabstop=4
-set backspace=indent,eol,start
-set autoindent
-set copyindent
-set shiftwidth=4
-set softtabstop=4
-set shiftround
-set showmatch
-set ignorecase
-set smartcase
-set smarttab
-set incsearch
-set history=1000
-set undolevels=1000
-set title
-set expandtab
-set visualbell
-set noerrorbells
-set nobackup
-set noswapfile
-set laststatus=2
-set splitright
-set splitbelow
-filetype plugin on
+nnoremap <Leader>f :Files<CR>
+nnoremap <Leader>g :GitFiles<CR>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>h :History<CR>
+nnoremap <Leader>l :BLines<CR>
+nnoremap <Leader>d :Lines<CR>
+nnoremap <Leader>r :BTags<CR>
+nnoremap <Leader>t :Tags<CR>
 
-set wildmode=longest,list,full
-set wildmenu
+nnoremap <Leader>z :TagbarToggle<CR>
+
+nnoremap <Leader>w :bprevious<CR>
+nnoremap <Leader>e :bnext<CR>
+nnoremap <Leader>q :bp <BAR> bd #<CR>
+
+nnoremap <Leader>p :!plc %<CR>
 
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
@@ -104,15 +92,11 @@ let g:syntastic_go_checkers=['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active',  'passive_filetypes': ['tex', 'go'] }
 
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
+"let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_theme = 'simple'
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/\.git/*,*.pyc
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-
 let g:tex_flavor='latex'
+
+let g:go_fmt_autosave = 0
