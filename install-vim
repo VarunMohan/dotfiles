@@ -11,7 +11,8 @@ mv ~/.vimrc ~/.vimrc.old
 ln -sf $BASE/vimrc ~/.vimrc
 
 mkdir -p ~/.config/nvim/autoload
-ln -sf $BASE/vimrc ~/.config/nvim/init.vim
+cat $BASE/vimrc $BASE/nvimrc > $BASE/totvimrc
+ln -sf $BASE/totvimrc ~/.config/nvim/init.vim
 ln -sf ~/.vim/autoload/plug.vim ~/.config/nvim/autoload/
 
 vim +PlugInstall +qall

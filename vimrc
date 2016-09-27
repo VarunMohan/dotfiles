@@ -134,6 +134,7 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 
 " Don't autofold code
 let g:pymode_folding = 0
+let g:pymode_breakpoint_bind = '<leader>B'
 
 let g:jedi#goto_assignments_command = "<leader>G"
 
