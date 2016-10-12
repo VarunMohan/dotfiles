@@ -25,8 +25,8 @@ Plug 'vim-airline/vim-airline-themes'
 "Lang
 Plug 'lervag/vimtex'
 Plug 'fatih/vim-go'
-Plug 'davidhalter/jedi-vim'
-Plug 'klen/python-mode'
+"Plug 'davidhalter/jedi-vim'
+"Plug 'klen/python-mode'
 
 "Lint
 Plug 'scrooloose/syntastic'
@@ -85,6 +85,11 @@ set background=dark
 colorscheme solarized
 
 setlocal nonumber
+set noswapfile
+set nobackup
+set nowb
+set wildmode=longest,list,full
+set wildmenu
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
