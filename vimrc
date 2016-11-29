@@ -143,6 +143,10 @@ let g:pymode_breakpoint_bind = '<leader>B'
 
 let g:jedi#goto_assignments_command = "<leader>G"
 
+
+" commenter
+let NERDSpaceDelims=1
+
 " extra stuff for when the indentation plugin gets confused
 :command -nargs=1 Soft set tabstop=<args> softtabstop=<args> shiftwidth=<args> expandtab
 :command -nargs=1 Hard set tabstop=<args> softtabstop=<args> shiftwidth=<args> noexpandtab
